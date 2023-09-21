@@ -2,10 +2,10 @@
 
 int main() {
     int numRestaurant;
-    int bestAvaliation;
+    int bestAvaliation = 0;
     int avaliation;
-    int codRestaurant[1000];
-    int bestRestaurant[1000];
+    int codRestaurant;
+    int bestRestaurant = 0;
     int numDays = 0;
     int codeBestRestaurant;
 
@@ -16,11 +16,10 @@ int main() {
             printf("Digite o codigo do restaurante e sua avaliacao: ");
             scanf("%d %d", &codRestaurant, &avaliation);
             if (avaliation >= bestAvaliation) {
-                if(codRestaurant < bestRestaurant[i]){
+    
                 bestAvaliation = avaliation;
-                bestRestaurant[i] = codRestaurant;
-
-                }
+                bestRestaurant = codRestaurant;
+                
             }
         }
         numDays++;
@@ -28,8 +27,8 @@ int main() {
 
     for(int i = 1; i <= numDays; i++){
 
-        printf("dia %d\n", i);
-        printf("%d\n\n", bestRestaurant[i]);
+        printf("\nDia %d\n", i);
+        printf("%d\n\n", bestRestaurant);
 
 
     }
